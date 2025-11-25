@@ -1,0 +1,22 @@
+**Descripción de los alimentos en la imagen:**
+
+La bolsa sorpresa puede incluir una variedad de sushi y rollos de sushi. Los posibles contenidos podrían ser:
+
+- **Sushi con salmón**: Un rollo de sushi con salmón crudo, arroz y wasabi.
+- **Sushi con atún**: Un rollo de sushi con atún crudo, arroz y wasabi.
+- **Sushi con camarón**: Un rollo de sushi con camarón crudo, arroz y wasabi.
+- **Sushi con langostino**: Un rollo de sushi con langostino crudo, arroz y wasabi.
+- **Sushi con camarón**: Un rollo de sushi con camarón crudo, arroz y wasabi.
+- **Sushi con atún rojo**: Un rollo de sushi con atún rojo crudo, arroz y wasabi.
+- **Sushi con salmón ahumado**: Un rollo de sushi con salmón ahumado crudo, arroz y wasabi.
+- **Sushi con camarón**: Un rollo de sushi con camarón crudo, arroz y wasabi.
+- **Sushi con langostino**: Un rollo de sushi con langostino crudo, arroz y wasabi.
+- **Sushi con atún**: Un rollo de sushi con atún crudo, arroz y wasabi.
+- **Sushi con salmón**: Un rollo de sushi con salmón crudo, arroz y wasabi.
+- **Sushi con camarón**: Un rollo de sushi con camarón crudo, arroz y wasabi.
+- **Sushi con atún**: Un rollo de sushi con atún crudo, arroz y wasabi.
+- **Sushi con salmón**: Un rollo de sushi con salmón crudo, arroz y wasabi.
+- **Sushi con camarón**: Un rollo de sushi con camarón crudo, arroz y wasabi.
+- **Sushi con atún**: Un rollo de sushi con atún crudo, arroz y wasabi.
+- **Sushi con salmón**: Un rollo de sushi con salmón crudo, arroz y wasabi.
+- **Sushi con camarón**: Un rol

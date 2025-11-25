@@ -1,0 +1,5 @@
+- **Sushi**: La bolsa puede incluir sushi de salmón con wasabi y jengibre, sushi de camarón con queso crema y cebolla roja, sushi de atún con wasabi verde y jengibre amarillo.
+- **Tempura**: La bolsa puede incluir tempura de camarón con salsa de soja y cilantro.
+- **Ensalada**: La bolsa puede incluir una ensalada de microgreens con un aderezo de mostaza y miel.
+- **Salsa**: La bolsa puede incluir una salsa picante de tomate con cilantro fresco.
+- **Sopas**: La bolsa puede incluir una sopa de miso con algas nori y verduras frescas.

@@ -1,0 +1,1 @@
+* Ejemplo de un sándwich: La bolsa puede incluir un sándwich con pan integral, tomate, queso blanco y jamón.

@@ -1,0 +1,16 @@
+La bolsa sorpresa podría incluir un plato de sushi variado. El contenido puede ser:
+
+- Sushi con salmón: Este tipo de sushi está hecho con arroz, salmón fresco y a menudo se adorna con hierbas como cilantro o perejil.
+- Sushi con atún: También conocido como maguro, este sushi está hecho con arroz y atún fresco.
+- Sushi de pollo: Un tipo menos común pero delicioso, hecho con arroz y filetes de pollo.
+- Sushi de atún crudo: Este es un sushi tradicional hecho con arroz y atún crudo, a menudo adornado con wasabi y jengibre.
+- Sushi de camarón: Hecho con arroz, camarones frescos y a menudo adornado con hierbas como cilantro o perejil.
+- Sushi de langostinos: Un tipo especial de sushi hecho con arroz y langostinos frescos.
+- Sushi de atún crudo con wasabi: Este es un sushi tradicional hecho con arroz, atún crudo y a menudo adornado con wasabi y jengibre.
+- Sushi de pollo crudo: Un tipo menos común pero delicioso, hecho con arroz y filetes de pollo crudo.
+- Sushi de camarón crudo: Un tipo especial de sushi hecho con arroz y camarones crudos.
+- Sushi de langostinos crudo: Un tipo especial de sushi hecho con arroz y langostinos crudos.
+- Sushi de atún crudo con wasabi y jengibre: Este es un sushi tradicional hecho con arroz, atún crudo, wasabi y jengibre.
+- Sushi de pollo crudo con wasabi: Este es un sushi tradicional hecho con arroz, filetes de pollo crudo y a menudo adornado con wasabi.
+- Sushi de camarón crudo con wasabi: Este es un sushi tradicional hecho con arroz, camarones crudos y a menudo adornado con wasabi.
+- Sushi de langostinos crudo con wasabi: Este es un sushi tradicional hecho con arroz, langostinos crudos y a menudo adornado con wasabi.

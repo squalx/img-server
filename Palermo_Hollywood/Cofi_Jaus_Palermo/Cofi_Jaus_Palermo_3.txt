@@ -1,0 +1,3 @@
+* Ejemplo de tortas: La bolsa puede incluir una torta de chocolate con cobertura de chocolate y otra torta con relleno de pistachos y nueces.
+
+Estas descripciones podrían ayudar a los clientes a imaginar el contenido de la bolsa sorpresa.

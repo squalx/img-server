@@ -1,0 +1,9 @@
+La bolsa sorpresa incluirá un plato de sushi variado. Pueden ser los siguientes tipos:
+
+- **Sushi con salmón**: Sushi tradicional hecho con arroz, salmón y wasabi.
+- **Sushi tempura**: Sushi envuelto en una crocante capa de tempura.
+- **Sushi con wasabi**: Sushi con arroz, salmón y una porción de wasabi.
+- **Sushi con algas**: Sushi con arroz, salmón y una capa de alga nori.
+- **Sushi con atún**: Sushi con arroz, atún y wasabi.
+
+Además de los sushi, la bolsa también puede incluir una copa de vino blanco y un platito de salsa para acompañar el sushi.
