@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Roboto+Serif:wght@600;700;800&display=swap" rel="stylesheet">
+<title>Piso de precio $5.000 — variantes</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Plus Jakarta Sans', -apple-system, sans-serif; -webkit-font-smoothing: antialiased; background:#e9e9ee; display:flex; gap:48px; padding:40px; justify-content:center; flex-wrap:wrap;}
+  .phone { width:393px; height:852px; background:#FFFAF5; border-radius:48px; border:10px solid #1a1a1a; overflow:hidden; display:flex; flex-direction:column; position:relative; box-shadow:0 20px 60px rgba(0,0,0,.25);}
+  .statusbar{ height:44px; display:flex; justify-content:space-between; align-items:center; padding:0 28px; font-size:14px; font-weight:600; color:#3E3E3E; flex-shrink:0;}
+  .statusbar .icons{ letter-spacing:2px; font-size:12px;}
+  .head{ padding:8px 20px 12px; display:flex; align-items:center; gap:12px; flex-shrink:0;}
+  .back{ width:36px; height:36px; border-radius:12px; background:#fff; display:flex; align-items:center; justify-content:center; font-size:18px; color:#4A7C23; box-shadow:0 1px 3px rgba(0,0,0,.06); cursor:pointer;}
+  .head h2{ font-family:'Roboto Serif',serif; font-size:18px; font-weight:700; color:#3E3E3E;}
+  .steps{ display:flex; gap:6px; padding:0 20px 12px; flex-shrink:0;}
+  .steps div{ height:4px; border-radius:2px; background:#e5e2f7; flex:1;}
+  .steps div.done{ background:#4A7C23;}
+  .body{ flex:1; overflow-y:auto; padding:4px 20px 20px;}
+  .banner{ background:#fff8ec; border:1.5px solid #f3e3c3; border-radius:14px; padding:12px 14px; font-size:13px; color:#7a5b1e; line-height:1.45; margin-bottom:14px;}
+  .banner b{ color:#5c4413;}
+  .q-label{ font-size:13px; font-weight:700; color:#6b6b66; text-transform:uppercase; letter-spacing:.5px; margin:14px 0 8px;}
+  .field{ background:#fff; border:1.5px solid #ececea; border-radius:14px; padding:12px 14px; margin-top:8px;}
+  .field.error{ border-color:#A52A12; background:#FFF0E8;}
+  .field label{ display:block; font-size:11px; font-weight:700; color:#8a8a84; text-transform:uppercase; letter-spacing:.5px; margin-bottom:4px;}
+  .field input{ border:none; outline:none; font-size:20px; font-weight:600; color:#3E3E3E; width:100%; background:transparent;}
+  .err-msg{ color:#A52A12; font-size:12.5px; font-weight:600; margin-top:6px; line-height:1.45;}
+  .tier{ background:#fff; border:1.5px solid #ececea; border-radius:16px; padding:14px 16px; margin-bottom:10px; cursor:pointer; transition:border-color .15s;}
+  .tier.sel{ border-color:#4A7C23; box-shadow:0 0 0 3px rgba(74,124,35,.15);}
+  .tier.off{ background:#f7f5f1; border-color:#ececea; cursor:not-allowed;}
+  .tier.off .top{ opacity:.55;}
+  .tier.off .sub{ opacity:.8;}
+  .recibis{ font-size:14px; font-weight:600; color:#6b6b66; white-space:nowrap;}
+  .recibis b{ font-size:26px; font-weight:800; color:#3D6620; margin-left:4px; letter-spacing:-.5px;}
+  .tier.off .recibis b{ color:#8a8a84;}
+  .pct-sm{ font-size:15px; font-weight:700; color:#8a8a84; margin-left:8px;}
+  .tier.off .pct-sm{ color:#a3a39d;}
+  .tag{ font-size:11px; font-weight:800; padding:4px 8px; border-radius:8px;}
+  .tag.rec{ background:#F0E4D7; color:#65421A; margin-left:auto; font-size:10px; white-space:nowrap;}
+  .tier.off .tag.rec{ opacity:.4;}
+  .sub{ font-size:13px; color:#8a8a84; margin-top:4px;}
+  .block-msg{ display:flex; align-items:flex-start; gap:8px; margin-top:10px; background:#FFF0E8; border-radius:10px; padding:9px 11px;}
+  .block-msg .ico{ font-size:13px; line-height:1.3;}
+  .block-msg p{ font-size:12.5px; font-weight:600; color:#A52A12; line-height:1.4;}
+  .block-msg p b{ font-weight:800;}
+  .sticky{ margin:0 20px; background:#fff; border:1.5px solid #ececea; border-radius:16px; padding:12px 16px; flex-shrink:0;}
+  .sticky .line{ display:flex; justify-content:space-between; font-size:13px; color:#6b6b66; padding:3px 0;}
+  .sticky .line b{ color:#3E3E3E; font-size:14px;}
+  .sticky .line.hero b{ color:#3D6620; font-size:16px;}
+  .cta{ margin:12px 20px 24px; background:#4A7C23; color:#fff; border:none; border-radius:10px; padding:16px; font-size:15px; font-weight:700; cursor:pointer; flex-shrink:0;}
+  .cta.off{ background:#d6d3cb; color:#9a978f; cursor:not-allowed;}
+  .floorline{ font-size:11.5px; color:#a3a39d; line-height:1.4; margin-top:6px;}
+  .floorline b{ color:#6b6b66;}
+  .homebar{ position:absolute; bottom:8px; left:50%; transform:translateX(-50%); width:130px; height:5px; border-radius:3px; background:#1a1a1a; opacity:.8;}
+  .caption{ max-width:393px; font-size:13px; color:#555; line-height:1.5; margin-top:12px;}
+  .caption b{ color:#222;}
+  .vt{ font-size:11px; font-weight:800; text-transform:uppercase; letter-spacing:1px; color:#888; margin-bottom:6px;}
+</style>
+</head>
+<body>
+
+<!-- ===== VARIANTE A: gris con motivo ===== -->
+<div>
+<div class="phone">
+  <div class="statusbar"><span>10:30</span><span class="icons">▮▮▮ ⌁ ▰</span></div>
+  <div class="head"><div class="back">‹</div><h2>Precio y descuento</h2></div>
+  <div class="steps"><div class="done"></div><div class="done"></div><div></div></div>
+  <div class="body">
+    <div class="banner">💡 <b>Regla de oro:</b> poné el <b>precio real</b> de carta. Verificamos cada bolsa antes de publicarla.</div>
+    <div class="q-label">Precio original</div>
+    <div class="field">
+      <label>Lo que vale en tu mostrador</label>
+      <input value="$ 11.000">
+    </div>
+    <div class="q-label">Elegí el descuento</div>
+    <div class="tier off">
+      <div class="top"><span class="recibis">Recibís <b>$2.805</b></span><span class="pct-sm">70%</span></div>
+      <div class="block-msg"><span class="ico">🔒</span><p>El cliente pagaría <b>$3.300</b> — debajo de nuestro mínimo de <b>$5.000</b>. Probá con un descuento menor.</p></div>
+    </div>
+    <div class="tier sel">
+      <div class="top"><span class="recibis">Recibís <b>$4.675</b></span><span class="pct-sm">50%</span><span class="tag rec">⭐ Recomendada</span></div>
+      <div class="sub">Ventas altas. Cliente paga $5.500 · Tarifa Apricot $825.</div>
+    </div>
+    <div class="tier">
+      <div class="top"><span class="recibis">Recibís <b>$5.610</b></span><span class="pct-sm">40%</span></div>
+      <div class="sub">Rotación media. Cliente paga $6.600 · Tarifa Apricot $990.</div>
+    </div>
+    <div class="floorline">Las bolsas se publican a <b>$5.000 o más</b>: así no competimos con ofertas de kiosco y cada bolsa vale la pena.</div>
+  </div>
+  <div class="sticky">
+    <div class="line"><span>Precio con descuento:</span><b>$5.500</b></div>
+    <div class="line hero"><span>Recibís:</span><b>$4.675</b></div>
+  </div>
+  <button class="cta">Continuar</button>
+  <div class="homebar"></div>
+</div>
+<div class="caption"><div class="vt">Variante A — gris con motivo</div>Todas las opciones quedan a la vista (se conserva el modelo mental de "más descuento = se vende más rápido"). La bloqueada se gris con el motivo adentro: número + regla. Se puede elegir cualquiera válida; nunca hay calle sin salida.</div>
+</div>
+
+<!-- ===== VARIANTE B: escalera adaptiva ===== -->
+<div>
+<div class="phone">
+  <div class="statusbar"><span>10:30</span><span class="icons">▮▮▮ ⌁ ▰</span></div>
+  <div class="head"><div class="back">‹</div><h2>Precio y descuento</h2></div>
+  <div class="steps"><div class="done"></div><div class="done"></div><div></div></div>
+  <div class="body">
+    <div class="banner">💡 <b>Regla de oro:</b> poné el <b>precio real</b> de carta. Verificamos cada bolsa antes de publicarla.</div>
+    <div class="q-label">Precio original</div>
+    <div class="field">
+      <label>Lo que vale en tu mostrador</label>
+      <input value="$ 11.000">
+    </div>
+    <div class="q-label">Elegí el descuento</div>
+    <div class="tier sel">
+      <div class="top"><span class="recibis">Recibís <b>$4.675</b></span><span class="pct-sm">50%</span><span class="tag rec">⭐ Recomendada</span></div>
+      <div class="sub">Ventas altas. Cliente paga $5.500 · Tarifa Apricot $825.</div>
+    </div>
+    <div class="tier">
+      <div class="top"><span class="recibis">Recibís <b>$5.610</b></span><span class="pct-sm">40%</span></div>
+      <div class="sub">Rotación media. Cliente paga $6.600 · Tarifa Apricot $990.</div>
+    </div>
+    <div class="tier">
+      <div class="top"><span class="recibis">Recibís <b>$6.545</b></span><span class="pct-sm">30%</span></div>
+      <div class="sub">Rotación lenta. Cliente paga $7.700 · Tarifa Apricot $1.155.</div>
+    </div>
+    <div class="floorline">Con tu precio, el 70% quedaría abajo del mínimo de <b>$5.000</b>: te mostramos las opciones que se pueden publicar.</div>
+  </div>
+  <div class="sticky">
+    <div class="line"><span>Precio con descuento:</span><b>$5.500</b></div>
+    <div class="line hero"><span>Recibís:</span><b>$4.675</b></div>
+  </div>
+  <button class="cta">Continuar</button>
+  <div class="homebar"></div>
+</div>
+<div class="caption"><div class="vt">Variante B — escalera adaptiva</div>Nunca se ve una opción bloqueada: la escalera se recalcula (50/40/30) y una línea explica por qué no está el 70%. Menos ruido, pero el comercio pierde de vista la opción mayor y la regla se explica una sola vez, en letra chica.</div>
+</div>
+
+<!-- ===== VARIANTE C: aviso en el campo (caso todo bloqueado) ===== -->
+<div>
+<div class="phone">
+  <div class="statusbar"><span>10:30</span><span class="icons">▮▮▮ ⌁ ▰</span></div>
+  <div class="head"><div class="back">‹</div><h2>Precio y descuento</h2></div>
+  <div class="steps"><div class="done"></div><div class="done"></div><div></div></div>
+  <div class="body">
+    <div class="banner">💡 <b>Regla de oro:</b> poné el <b>precio real</b> de carta. Verificamos cada bolsa antes de publicarla.</div>
+    <div class="q-label">Precio original</div>
+    <div class="field error">
+      <label>Lo que vale en tu mostrador</label>
+      <input value="$ 7.000">
+    </div>
+    <div class="err-msg">⚠ Con este precio, ni el descuento mínimo (40%) llega al piso: el cliente pagaría $4.200 y el mínimo es <b>$5.000</b>. Subí el precio original para poder publicar.</div>
+    <div class="q-label" style="margin-top:18px;">Elegí el descuento</div>
+    <div class="tier off">
+      <div class="top"><span class="recibis">Recibís <b>$1.785</b></span><span class="pct-sm">70%</span></div>
+    </div>
+    <div class="tier off">
+      <div class="top"><span class="recibis">Recibís <b>$2.975</b></span><span class="pct-sm">50%</span></div>
+    </div>
+    <div class="tier off">
+      <div class="top"><span class="recibis">Recibís <b>$3.570</b></span><span class="pct-sm">40%</span></div>
+    </div>
+  </div>
+  <div class="sticky">
+    <div class="line"><span>Precio con descuento:</span><b>—</b></div>
+  </div>
+  <button class="cta off">Subí el precio original para continuar</button>
+  <div class="homebar"></div>
+</div>
+<div class="caption"><div class="vt">Variante C — aviso en el campo (complemento de A o B)</div>El caso sin salida: ningún descuento llega al piso. El aviso vive junto al campo (donde está la causa) y el CTA dice qué hacer. Esta variante no compite con A ni B — se agrega a la elegida.</div>
+</div>
+
+<script>
+  const p = new URLSearchParams(location.search).get('p');
+  if (p) {
+    const divs = [...document.body.children].filter(d => d.tagName === 'DIV');
+    divs.forEach((d, i) => { if (String(i + 1) !== p) d.style.display = 'none'; });
+    document.body.style.padding = '40px';
+  }
+</script>
+</body>
+</html>
